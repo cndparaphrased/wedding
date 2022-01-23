@@ -1,0 +1,7 @@
+node_modules
+public
+.vscode/settings.json
+index.css
+index.css.map
+index.min.css
+index.min.css.map

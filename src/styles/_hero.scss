@@ -1,0 +1,12 @@
+@use "variables";
+
+.hero {
+  height: calc(100vh - 90px);
+  background: linear-gradient(90deg, var(--ltgrey) 50%, var(--blue) 50%);
+  @include variables.flexCenter;
+}
+
+.h1 {
+  font-size: 8rem;
+  font-weight: 500;
+}

@@ -1,0 +1,60 @@
+@use "variables";
+
+// =========================
+// TYPOGRAPHY
+// =========================
+body {
+  font-family: var(--sansFont);
+  font-size: 1.6rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+// =========================
+// MAIN STYLES 
+// =========================
+body {
+    &::before,
+    &::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    width: calc(100vw - 45px);
+    height: 45px;
+    background-color: var(--white);
+    z-index: 1;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+
+// =========================
+// FOOTER
+// =========================
+.footer {
+  background-color: var(--white);
+  color: var(--drkgrey);
+  width: 100%;
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+
+  &__logo, &__copy {
+    opacity: 50%;
+  }
+
+  &__logo {
+    height: 16px;
+  }
+}

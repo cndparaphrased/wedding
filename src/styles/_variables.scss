@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  // COLOURS
+  --black: #202123;
+  --white: #ffffff;
+  --ltgrey: #f2f4f6;
+  --drkgrey: #6B6D6E;
+  --blue: #13B0D4;
+
+  // FONTS
+  --serifFont: 'Lora', serif;
+  --sansFont: 'Poppins', sans-serif;
+}
+
+// =========================
+// COMMON MIXINS
+// =========================
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexCenter {
+  @include flex;
+  justify-content: center;
+}
+
+@mixin flexSpace {
+  @include flex;
+  justify-content: space-between;
+}
+
+@mixin aUnderline {
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+}
