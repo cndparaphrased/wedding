@@ -6,13 +6,10 @@
 body {
   font-family: var(--sansFont);
   font-size: 1.6rem;
-  background-color: var(--black);
+  background-color: var(--white);
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 100vw;
 }
@@ -21,6 +18,88 @@ h1 {
   line-height: 1.5;
   font-family: var(--sansFont);
   font-size: 8rem;
-  color: var(--white);
+  color: var(--black);
 }
 
+.menu {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  font-family: var(--serifFont);
+
+    li {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    a {
+      position: relative;
+      width: 100%;
+      background: var(--green);
+      color: var(--white);
+      text-align: center;
+      font-size: 2.4rem;
+      padding: 13px 20px 6px;
+
+      &:hover {
+        background-color: var(--mdgreen);
+      }
+
+      &.active {
+        background-color: #505F30;
+
+        &::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 60px 40px 60px;
+        border-color: transparent transparent var(--drkgreen) transparent;
+        margin-left: -60px;
+      }
+      }
+    }
+}
+
+.sect {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  
+  &--green {
+    background-color: var(--black);
+  }
+
+  &--white {
+    background-color: var(--white);
+  }
+}
+
+.sectIcon {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -200px;
+  transform: translateY(-65%) rotate(45deg);
+  overflow: hidden;
+}
+
+.mainImg {
+  max-width: unset;
+  transform: rotate(-45deg);
+  height: 300px;
+  position: absolute;
+  bottom: -80px;
+  left: 95px;
+}
