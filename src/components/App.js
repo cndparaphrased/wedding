@@ -3,16 +3,16 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import "../styles/index.scss";
 import Main from "./Main";
 import Rsvp from "./Rsvp";
-import Venue from "./Venue";
-import Covid from "./Covid";
+import Details from "./Details";
+import Stories from "./Stories";
 
 const App = () => {
   return (
     <>
       <Main />
-      {/* <Rsvp />
-      <Venue />
-      <Covid /> */}
+      <Stories />
+      <Details />
+      {/* <Rsvp /> */}
     </>
   )
 }

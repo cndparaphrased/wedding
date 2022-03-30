@@ -1,31 +1,37 @@
-import mainImg from "../images/us-main.png";
+import wreath from "../images/bg/wreath9.svg";
+import pen from "../images/icons/pen.png";
 
 const Main = () => {
   return (
-    <section className="sect sect--green">
-      <div className="sectIcon">
-        <img src={mainImg} alt="" className="mainImg" />
+    <section className="mainContainer">
+      <div className="hero">
+        <div className="header">
+          <h1>
+            <span className="names">cindy</span>
+            <span className="and">And</span>
+            <span className="names">jarek</span>
+          </h1>
+
+          <p className="date">July 2, 2022</p>
+        </div>
+
+        <div className="heroContent">
+          <div className="imgWrap">
+            <div className="mainImg">
+              <img src={wreath} alt="" className="wreath" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
       </div>
-      {/* <h1>Cindy & Jarek</h1> */}
-      
-      <nav>
-        <ul className="menu">
-          <li>
-            <a href="#home">home</a>
-          </li>
-          <li>
-            <a href="#rsvp" className="active">rsvp</a>
-          </li>
-          <li>
-            <a href="#venue">venue</a>
-          </li>
-          <li>
-            <a href="#covid">covid</a>
-          </li>
-        </ul>
-      </nav>
+
+      <div className="rsvpBox">
+        <button type="button" className="rsvpBtn">
+          <img src={pen} alt="" className="pen" aria-hidden="true" />
+          <span className="btnText">RSVP</span>
+        </button>
+      </div>
     </section>
-  );
-};
+  )
+}
 
 export default Main;

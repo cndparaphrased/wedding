@@ -6,24 +6,42 @@
 }
 
 @font-face {
+  font-family: 'BP-Victoria-Bold-Regular';
+  src: url('../fonts/BP-Victoria-Bold-Regular.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'MrsEavesSmallCaps';
   src: url('../fonts/MrsEavesSmallCaps.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MrsEavesLightRomanItalic';
+  src: url('../fonts/MrsEavesLightRomanItalic.TTF') format('ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+
 :root {
   // COLOURS
-  --black: #242424;
+  --black: #464646;
+  --grey: #A1A59B;
   --white: #F5F5F5;
-  --ltgreen: #EEFCCE;
-  --green: #8BA352;
-  --mdgreen: #738844;
-  --drkgreen: #505F30;
+  --green: #8ca065;
+  --ltgreen: #a3b07e;
+  --dkgreen: #7D8E63;
+  --purple: rgb(143, 113, 155);
+
 
   // FONTS
   --serifFont: 'MrsEavesSmallCaps', serif;
-  --sansFont: 'BP-Victoria-Regular', sans-serif;
+  --scriptFont: 'BP-Victoria-Regular', sans-serif;
+  --boldScript: 'BP-Victoria-Bold-Regular', sans-serif;
+  --italicFont: 'MrsEavesLightRomanItalic', serif;
 }
 
 // =========================
