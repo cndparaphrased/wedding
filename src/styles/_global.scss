@@ -3,35 +3,18 @@
 body {
   font-family: var(--serifFont);
   font-size: 1.6rem;
+    background-color: var(--white);
+  background-image: url(../images/bg/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .mainContainer {
   position: relative;
   font-weight: 400;
   overflow: hidden;
-  background-color: var(--white);
-  
-  // &::before {
-  //   content: '';
-  //   position: fixed;
-  //   top: 0;
-  //   right: -27%;
-  //   background-image: url(../images/bg/wildflower4.svg);
-  //   background-repeat: no-repeat;
-  //   width: 60%;
-  //   height: 100vh;
-  // }
-
-  // &::after {
-  //   content: '';
-  //   position: fixed;
-  //   top: 0;
-  //   right: -27%;
-  //   background-image: url(../images/bg/wildflower2.svg);
-  //   background-repeat: no-repeat;
-  //   width: 60%;
-  //   height: 100vh;
-  // }
 }
 
 .hero {
@@ -39,30 +22,6 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: -23%;
-    background-image: url(../images/bg/wildflower5.svg);
-    background-repeat: no-repeat;
-    width: 60%;
-    height: 100vh;
-    // z-index: 10;
-  }
-
-  &::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: -27%;
-    background-image: url(../images/bg/wildflower2.svg);
-    background-repeat: no-repeat;
-    width: 60%;
-    height: 100vh;
-    // z-index: 10;
-  }
 }
 
 .header {
@@ -140,9 +99,9 @@ h1 {
   background-color: var(--white);
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 5%;
   height: 48px;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   z-index: 100;
@@ -173,7 +132,6 @@ h1 {
 
 .section {
   padding-bottom: 96px;
-  background-color: var(--white);
 }
 
 .wrapper {
@@ -408,10 +366,23 @@ h1 {
     text-transform: uppercase;
     display: flex;
     align-items: baseline;
+
+    &--center {
+      align-items: center;
+    }
   }
 
   &__paragraph {
     margin-bottom: 8px;
+
+    &--line {
+      line-height: 1.6;
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+    letter-spacing: .5px;
   }
 }
 

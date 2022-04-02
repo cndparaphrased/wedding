@@ -1,3 +1,4 @@
+import { useForm } from "@formcarry/react";
 import Counter from "./Counter";
 import NameFields from "./NameFields";
 import EmailField from "./EmailField";
@@ -36,15 +37,29 @@ const Rsvp = () => {
     };
   };
 
-  const kidCheck = (e) => {
-    const age = e.target.parentNode.nextElementSibling;
+  const { state, submit } = useForm({
+    id: 'ujfksTdVDXe'
+  });
 
-    if (e.target.checked) {
-      age.style.display = 'block';
-    } else {
-      age.style.display = 'none';
-    };
+  const clickedSubmit = (e) => {
+    const subBtn = document.querySelector('.rsvpForm__submit');
+
+    if (e.target === subBtn && state.submitting || state.submitted) {
+      subBtn.setAttribute('disabled', 'true');
+    }
   };
+
+  if (state.submitted) {
+    return <div className="dropdown">
+      <div>
+        <h4 className="dropdown__heading dropdown__heading--center">
+          <img src={require('../images/icons/heart.png')} className="dropdown__icon" alt="" aria-hidden="true" />
+          <span>Thanks for getting back to us!</span>
+        </h4>
+        <p className="dropdown__paragraph--line">If you have questions or anything changes, just let us know: <a href="mailto:cindyandjarek@gmail.com" className="dropdown__link">cindyandjarek@gmail.com</a>!</p>
+      </div>
+    </div>
+  }
 
   return (
     <div className="dropdown">
@@ -53,7 +68,7 @@ const Rsvp = () => {
         <span>Can you make it?</span>
       </h4>
 
-      <form className="rsvpForm">
+      <form className="rsvpForm" onSubmit={submit} onClick={clickedSubmit}>
         {/* ACCEPTS */}
         <div>
           <div className="rsvpForm__split">
@@ -99,16 +114,6 @@ const Rsvp = () => {
           Submit
         </button>
       </form>
-
-      {/* <div className="dropdown__box">
-        <h4 className="dropdown__heading">
-          <img src={busIcon} className="dropdown__icon" alt="" aria-hidden="true" />
-          <span>Thank you for responding!</span>
-          <span>We're sorry you can't make it! Please let us know if your schedule opens up!</span>
-        </h4>
-
-        <p className="dropdown__paragraph">If you have any questions or concerns, just contact us! cindyandjarek@gmail.com</p>
-      </div> */}
     </div>
   );
 };

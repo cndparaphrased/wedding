@@ -67,19 +67,19 @@ const Counter = () => {
 
       {Array.from({length: guests}).map((guest, index) => (
         <div key={index}>
-          <NameFields />
+          <NameFields guestNum={index} />
           
           {guests > 1 && index != 0 && (
             <div className={guests - 1 === index ? "rsvpForm__split--kidsLast" : "rsvpForm__split--kids"}>
               <div className="rsvpForm__kids">
                 <div className="rsvpForm__field">
-                  <label htmlFor="kids" className="rsvpForm__kids--check">Under 19?</label>
-                  <input type="checkbox" id="kids" name="kids" onChange={kidCheck} />
+                  <label htmlFor={`kids-${index}`} className="rsvpForm__kids--check">Under 19?</label>
+                  <input type="checkbox" id={`kids-${index}`} name={`kids-${index}`} onChange={kidCheck} />
                 </div>
 
                 <div className="rsvpForm__field kidsAge">
-                  <label htmlFor="age">Age</label>
-                  <input type="text" id="age" name="age" className="rsvpForm__kids--age" maxLength={2} required />
+                  <label htmlFor={`age-${index}`}>Age</label>
+                  <input type="text" id={`age-${index}`} name={`age-${index}`} className="rsvpForm__kids--age" maxLength={2} required disabled />
                 </div>
               </div>
             </div>

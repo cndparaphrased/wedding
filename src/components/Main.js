@@ -1,7 +1,11 @@
+import useScrollHandler from "./useScrollHandler";
 import wreath from "../images/bg/wreath9.svg";
 import pen from "../images/icons/pen.png";
 
 const Main = () => {
+  const scrollPosition = useScrollHandler();
+  console.log(scrollPosition);
+
   return (
     <section className="mainContainer">
       <div className="hero">
