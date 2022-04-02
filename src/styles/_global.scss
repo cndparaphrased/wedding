@@ -11,27 +11,27 @@ body {
   overflow: hidden;
   background-color: var(--white);
   
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    right: -27%;
-    background-image: url(../images/bg/wildflower4.svg);
-    background-repeat: no-repeat;
-    width: 60%;
-    height: 100vh;
-  }
+  // &::before {
+  //   content: '';
+  //   position: fixed;
+  //   top: 0;
+  //   right: -27%;
+  //   background-image: url(../images/bg/wildflower4.svg);
+  //   background-repeat: no-repeat;
+  //   width: 60%;
+  //   height: 100vh;
+  // }
 
-  &::after {
-    content: '';
-    position: fixed;
-    top: 0;
-    right: -27%;
-    background-image: url(../images/bg/wildflower2.svg);
-    background-repeat: no-repeat;
-    width: 60%;
-    height: 100vh;
-  }
+  // &::after {
+  //   content: '';
+  //   position: fixed;
+  //   top: 0;
+  //   right: -27%;
+  //   background-image: url(../images/bg/wildflower2.svg);
+  //   background-repeat: no-repeat;
+  //   width: 60%;
+  //   height: 100vh;
+  // }
 }
 
 .hero {
@@ -328,6 +328,10 @@ h1 {
       transition: transform .12s;
     }
 
+    &:focus-visible::after {
+      border: 2px solid #6b6b6b;
+    }
+
     &--active::after {
       transform: rotate(180deg);
     }
@@ -350,6 +354,7 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5rem;
   line-height: 1.48;
+  display: none;
 
   &__box {
     padding-bottom: 30px;
@@ -391,7 +396,7 @@ h1 {
     background-position: bottom center;
   }
 
-  &__topMargin, &__heading {
+  &__topMargin {
     margin-top: 30px;
   }
 
@@ -408,4 +413,249 @@ h1 {
   &__paragraph {
     margin-bottom: 8px;
   }
+}
+
+.rsvpForm {
+  font-weight: 600;
+  letter-spacing: .25px;
+
+  &__container {
+    all: unset;
+    display: block;
+    text-align: left;
+    border-bottom: 2px solid var(--dkgreen);
+    padding: 0 18px 24px;
+    margin-bottom: 24px;
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__split {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .rsvpForm__field {
+      width: 49%;
+    }
+
+    &--kids {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 12px;
+    }
+
+    &--kidsLast {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--dkgreen);
+    }
+  }
+
+  &__numBtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .numInput {
+      height: 48px;
+      width: 72px;
+      margin: 0 12px;
+      text-align: center;
+      font-size: 2rem;
+      color: var(--black);
+    }
+
+    .numBtn {
+      width: 28px;
+      height: 28px;
+      border: 2px solid var(--dkgreen);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__icon {
+        width: 14px;
+      }
+    }
+  }
+
+  input[type="text"], input[type="email"], textarea {
+    border: 1px solid var(--dkgreen);
+    border-radius: 3px;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    appearance: none;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    border: 2px solid var(--dkgreen);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      background: rgba(124, 141, 98, .9);
+      transform: scale(0);
+      transition: transform .1s;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+
+    &:focus {
+      outline: 1px solid var(--dkgreen);
+    }
+
+    &.rsvpForm__kids {
+      border: 1px solid var(--dkgreen);
+      margin-left: 8px;
+    }
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &--top {
+      position: relative;
+      display: flex;
+
+      .rsvpForm__label {
+        top: 8px;
+      }
+    }
+
+    &--topMargin {
+      margin-top: 12px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 12px;
+    width: 100%;
+    color: #808080;
+    transition: all .2s;
+  }
+
+  &__inputText {
+    width: 100%;
+    padding: 18px 4px 4px;
+    z-index: 10;
+    background-color: transparent;
+    transition: all .2s;
+    color: var(--black);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: .5px;
+    line-height: 1.5;
+
+    &:focus, &--active {
+      background: #fff;
+      border-radius: 2px;
+      margin: 18px 2px 2px;
+      padding: 2px 6px;
+    }
+
+    &:focus + .rsvpForm__label,
+    &--active + .rsvpForm__label {
+      top: 0;
+      left: 0;
+      height: 100%;
+      color: #fff;
+      background-color: rgba(124, 141, 98, .9);
+      border-radius: 3px;
+
+      span {
+        position: absolute;
+        left: 8px;
+        top: 1px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__kids {
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+
+    .kidsAge {
+      display: none;
+    }
+
+    &--check {
+      margin-right: 8px;
+    }
+
+    &--age {
+      height: 28px;
+      width: 48px;
+      border: 2px solid var(--dkgreen);
+      margin-left: 8px;
+      color: var(--black);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: .5px;
+      text-align: center;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 96px;
+  }
+
+  &__submit {
+    background-color: var(--dkgreen);
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    display: flex;
+    margin: 24px auto 0;
+    border-radius: 3px;
+    transition: background-color .2s ease-in;
+
+    &:disabled {
+      background-color: #808080;
+      cursor: default;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--black);
+    }
+
+    img {
+      height: 2rem;
+      margin-right: 8px;
+    }
+  }
+}
+
+#rsvpDeclined, #rsvpAccepted {
+  display: none;
 }

@@ -38,6 +38,11 @@ button {
   margin: 0;
   cursor: pointer;  
   font-family: inherit;
+
+  &:focus-visible {
+    outline: 2px solid var(--dkgreen);
+    outline-offset: -2px;
+  }
 }
 
 .srOnly {
