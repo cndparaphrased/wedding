@@ -72,7 +72,7 @@ const Rsvp = () => {
         {/* ACCEPTS */}
         <div>
           <div className="rsvpForm__split">
-            <label htmlFor="accepts">Yes: ready to eat, drink, and party!</label>
+            <label htmlFor="accepts">Yes: ready to<span className="rsvpForm__hideMobile"> eat, drink, and</span> party!</label>
             <input type="radio" id="accepts" name="rsvp" value="accepts" onChange={onRsvpChange} />
           </div>
 
@@ -98,7 +98,7 @@ const Rsvp = () => {
         {/* DECLINES */}
         <div>
           <div className="rsvpForm__split">
-            <label htmlFor="declines">No: will be celebrating from afar.</label>
+            <label htmlFor="declines">No: <span className="rsvpForm__hideMobile"> will be</span> celebrating from afar.</label>
             <input type="radio" id="declines" name="rsvp" value="declines" onChange={onRsvpChange} />
           </div>
 

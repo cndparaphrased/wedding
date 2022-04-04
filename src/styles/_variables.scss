@@ -20,10 +20,9 @@
 }
 
 @font-face {
-  font-family: 'MrsEavesLightRomanItalic';
-  src: url('../fonts/MrsEavesLightRomanItalic.TTF') format('ttf');
+  font-family: 'MrsEavesSmartLigRoman';
+  src: url('../fonts/MrsEavesSmartLigRoman.ttf') format('ttf');
   font-weight: 400;
-  font-style: italic;
 }
 
 :root {
@@ -41,7 +40,7 @@
   --serifFont: 'MrsEavesSmallCaps', serif;
   --scriptFont: 'BP-Victoria-Regular', sans-serif;
   --boldScript: 'BP-Victoria-Bold-Regular', sans-serif;
-  --italicFont: 'MrsEavesLightRomanItalic', serif;
+  --italicFont: 'MrsEavesSmartLigRoman', serif;
 }
 
 // =========================

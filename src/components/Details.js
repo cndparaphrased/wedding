@@ -37,7 +37,7 @@ const Details = () => {
           <div className="detail__left">
             <h3 className="detail__date">
               <span className="detail__date--before">before</span>
-              <span className="detail__date--date">June</span>
+              <span className="detail__date--date detail__date--dateSpacing">June</span>
               <span className="detail__date--time">10th</span>
             </h3>
           </div>
@@ -49,7 +49,7 @@ const Details = () => {
                 className="detail__btn"
                 aria-expanded="false"
                 onClick={toggleDropdown}>
-                R. S. V. P.
+                <span>R. S. V. P.</span>
               </button>
             </h3>
 
@@ -77,7 +77,7 @@ const Details = () => {
               className="detail__btn" 
               aria-expanded="false" 
               onClick={toggleDropdown}>
-                Ceremony + Reception
+                <span>Ceremony + Reception</span>
               </button>
             </h3>
 
@@ -112,7 +112,7 @@ const Details = () => {
 
                   <p className="dropdown__paragraph"><strong>Museum</strong> is the closest TTC subway station (50 metres from the venue!)</p>
 
-                  <p>Unfortunately, there is no parking on site. The closest Green P parking is on Bedford Road or Yorkville Avenue.</p>
+                  <p>Unfortunately, there is no parking on site. The closest municipal (Green P) parking is on Bedford Road or Yorkville Avenue.</p>
                 </div>
               </div>
             </div>

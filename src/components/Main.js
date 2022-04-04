@@ -4,7 +4,7 @@ import pen from "../images/icons/pen.png";
 
 const Main = () => {
   const scrollPosition = useScrollHandler();
-  console.log(scrollPosition);
+  // console.log(scrollPosition);
 
   return (
     <section className="mainContainer">

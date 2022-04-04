@@ -42,7 +42,7 @@ const Counter = () => {
 
   return(
     <>
-      <div className="rsvpForm__split">
+      <div className="rsvpForm__split rsvpForm__split--number">
         <label htmlFor="numGuests">Number attending</label>
         <div className="rsvpForm__numBtns">
           <button type="button" className="numBtn" onClick={handleDecrease}>
@@ -67,23 +67,30 @@ const Counter = () => {
 
       {Array.from({length: guests}).map((guest, index) => (
         <div key={index}>
-          <NameFields guestNum={index} />
-          
-          {guests > 1 && index != 0 && (
-            <div className={guests - 1 === index ? "rsvpForm__split--kidsLast" : "rsvpForm__split--kids"}>
-              <div className="rsvpForm__kids">
-                <div className="rsvpForm__field">
-                  <label htmlFor={`kids-${index}`} className="rsvpForm__kids--check">Under 19?</label>
-                  <input type="checkbox" id={`kids-${index}`} name={`kids-${index}`} onChange={kidCheck} />
-                </div>
+          <fieldset className={guests > 1 ? "rsvpForm__fieldset--show" : "rsvpForm__fieldset"}>
+            <legend className={guests > 1 ? "rsvpForm__legend--show" : "rsvpForm__legend"}>
+              {`Guest #${index + 1}`}
+            </legend>
 
-                <div className="rsvpForm__field kidsAge">
-                  <label htmlFor={`age-${index}`}>Age</label>
-                  <input type="text" id={`age-${index}`} name={`age-${index}`} className="rsvpForm__kids--age" maxLength={2} required disabled />
+            <NameFields guestNum={index} />
+
+            {guests > 1 && index != 0 && (
+              <div className={guests - 1 === index ? "rsvpForm__split--kidsLast" : "rsvpForm__split--kids"}>
+                <div className="rsvpForm__kids">
+                  <div className="rsvpForm__field">
+                    <label htmlFor={`kids-${index}`} className="rsvpForm__kids--check">Under 19?</label>
+                    <input type="checkbox" id={`kids-${index}`} name={`kids-${index}`} onChange={kidCheck} />
+                  </div>
+
+                  <div className="rsvpForm__field kidsAge">
+                    <label htmlFor={`age-${index}`}>Age</label>
+                    <input type="text" id={`age-${index}`} name={`age-${index}`} className="rsvpForm__kids--age" maxLength={2} required disabled />
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          </fieldset>
+
         </div>
       ))}
     </>
