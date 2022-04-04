@@ -1,8 +1,31 @@
+import { useEffect, useRef } from "react";
 import Rsvp from "./Rsvp";
 import linkIcon from "../images/icons/link.png";
 import busIcon from "../images/icons/bus.png";
 
 const Details = () => {
+
+  const hiddenRef = useRef();
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHandler);
+
+    return () => window.removeEventListener('scroll', scrollHandler);
+  }, []);
+
+  const scrollHandler = () => {
+    const topBtn = document.querySelector('.btnTop');
+    const rsvpBtn = document.querySelector('.btnRsvp');
+
+    if (window.scrollY + window.innerHeight >= hiddenRef.current.offsetTop) {
+      rsvpBtn.style.display = "none";
+      topBtn.style.display = "flex";
+    } 
+    else {
+      rsvpBtn.style.display = "flex";
+      topBtn.style.display = "none";
+    }
+  };
 
   const toggleDropdown = (e) => {
     const thisBtn = e.target;
@@ -32,7 +55,7 @@ const Details = () => {
         <span className="h2--cursive">etc.</span>
       </h2>
 
-      <div className="wrapper wrapper__details">
+      <div className="wrapper wrapper__details" id="rsvpForm" ref={hiddenRef} >
         <div className="detail">
           <div className="detail__left">
             <h3 className="detail__date">

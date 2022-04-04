@@ -14,15 +14,16 @@
 
 @font-face {
   font-family: 'MrsEavesSmallCaps';
-  src: url('../fonts/MrsEavesSmallCaps.ttf') format('ttf');
+  src: url('../fonts/MrsEavesSmallCaps.ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MrsEavesSmartLigRoman';
-  src: url('../fonts/MrsEavesSmartLigRoman.ttf') format('ttf');
+  src: url('../fonts/MrsEavesSmartLigRoman.ttf');
   font-weight: 400;
+  font-style: normal;
 }
 
 :root {
@@ -41,28 +42,4 @@
   --scriptFont: 'BP-Victoria-Regular', sans-serif;
   --boldScript: 'BP-Victoria-Bold-Regular', sans-serif;
   --italicFont: 'MrsEavesSmartLigRoman', serif;
-}
-
-// =========================
-// COMMON MIXINS
-// =========================
-@mixin flex {
-  display: flex;
-  align-items: center;
-}
-
-@mixin flexCenter {
-  @include flex;
-  justify-content: center;
-}
-
-@mixin flexSpace {
-  @include flex;
-  justify-content: space-between;
-}
-
-@mixin aUnderline {
-  &:focus, &:hover {
-    text-decoration: underline;
-  }
 }

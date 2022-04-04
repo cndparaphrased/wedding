@@ -1,13 +1,31 @@
-import useScrollHandler from "./useScrollHandler";
 import wreath from "../images/bg/wreath9.svg";
 import pen from "../images/icons/pen.png";
+import top from "../images/icons/arrowUp.png";
 
 const Main = () => {
-  const scrollPosition = useScrollHandler();
-  // console.log(scrollPosition);
+  const handleRsvpLink = (e) => {
+    const btn = e.currentTarget;
+    const topBtn = e.currentTarget.parentNode.querySelector('.btnTop');
+    const formDropdown = document.querySelector('#rsvpForm').querySelector('.detail__btn');
+
+    if (formDropdown.getAttribute('aria-expanded') === 'false') {
+      formDropdown.click();
+    };
+
+    btn.style.display = "none";
+    topBtn.style.display = "flex";
+  };
+
+  const handleToTopLink = (e) => {
+    const btn = e.currentTarget;
+    const rsvpBtn = e.currentTarget.parentNode.querySelector('.btnRsvp');
+
+    btn.style.display = "none";
+    rsvpBtn.style.display = "flex";
+  }
 
   return (
-    <section className="mainContainer">
+    <section className="mainContainer" id="top">
       <div className="hero">
         <div className="header">
           <h1>
@@ -29,10 +47,14 @@ const Main = () => {
       </div>
 
       <div className="rsvpBox">
-        <button type="button" className="rsvpBtn">
+        <a href="#rsvpForm" className="rsvpBtn btnRsvp" onClick={handleRsvpLink}>
           <img src={pen} alt="" className="pen" aria-hidden="true" />
           <span className="btnText">RSVP</span>
-        </button>
+        </a>
+        <a href="#top" className="rsvpBtn btnTop" onClick={handleToTopLink}>
+          <span className="btnText"><span className="btnText--hideMobile">TO</span> TOP</span>
+          <img src={top} alt="" className="top" aria-hidden="true" />
+        </a>
       </div>
     </section>
   )

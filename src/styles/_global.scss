@@ -1,5 +1,4 @@
 @use "variables";
-
 // MEDIA QUERIES MAX-WIDTHS
 // 2100 PX
 // 1650 PX
@@ -32,276 +31,8 @@ body {
 }
 
 // = = = = = = = = = = = = = 
-// HERO AND TOP SECTION
+// RSVP & TO TOP BUTTONS
 // = = = = = = = = = = = = = 
-.hero {
-  height: calc(100vh - 36px);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.header {
-  color: var(--dkgreen);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 7rem 0 0;
-
-  @media (max-width: 1650px) {
-      padding: 5rem 0 0;
-  }
-
-  @media (max-width: 1200px) {
-      padding: 4rem 0 0;
-  }
-
-  @media (max-width: 650px) {
-    padding: 6rem 0 0;
-  }
-
-  @media (max-width: 510px) {
-    padding: 5rem 0 0;
-  }
-
-  @media (max-width: 395px) {
-    padding: 2rem 0 0;
-  } 
-}
-
-h1 {
-  line-height: 1;
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 395px) {
-    flex-direction: column;
-    width: 100%;
-  } 
-}
-
-.names {
-  font-family: var(--serifFont);
-  letter-spacing: 1px;
-  font-size: 9.6rem;
-
-  @media (max-width: 2100px) {
-    font-size: 8rem;
-  }
-
-  @media (max-width: 1650px) {
-    font-size: 7rem;
-  }
-
-  @media (max-width: 1440px) {
-    font-size: 6rem;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 5.2rem;
-  }
-
-  @media (max-width: 510px) {
-    font-size: 4.2rem;
-  }
-
-  @media (max-width: 395px) {
-    font-size: 3.8rem;
-    letter-spacing: 2px;
-
-    &:first-child {
-      align-self: flex-start;
-      margin-left: 16px;
-    }
-
-    &:last-child {
-      align-self: flex-end;
-      margin-right: 16px;
-    }
-  } 
-}
-
-.and {
-  color: rgba(51, 51, 51, .7);
-  margin: 0 24px;
-  font-family: var(--boldScript);
-  font-size: 7rem;
-
-  @media (max-width: 2100px) {
-    font-size: 6.2rem;
-  }
-
-  @media (max-width: 1650px) {
-    font-size: 5.5rem;
-  }
-
-  @media (max-width: 1440px) {
-    font-size: 4.8rem;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 4.2rem;
-    margin: 0 20px;
-  }
-
-  @media (max-width: 510px) {
-    font-size: 3.8rem;
-    margin: 0 12px;
-  }
-
-  @media (max-width: 395px) {
-    font-size: 4rem;
-    margin: -4px 0;
-  } 
-}
-
-.date {
-  font-size: 3.6rem;
-  font-family: var(--italicFont);
-  font-style: italic;
-  letter-spacing: 1px;
-  padding: 12px 0 24px;
-  
-  @media (max-width: 2100px) {
-    font-size: 3.3rem;
-  }
-
-  @media (max-width: 1650px) {
-    font-size: 3rem;
-  }
-
-  @media (max-width: 1440px) {
-    padding: 10px 0 20px;
-    font-size: 2.5rem;
-  }
-
-  @media (max-width: 1200px) {
-    font-size: 2.2rem;
-  }
-
-  @media (max-width: 850px) {
-    padding: 8px 0 12px;
-  }
-
-  @media (max-width: 510px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 395px) {
-    font-size: 2rem;
-    color: rgba(51, 51, 51, .7);
-    padding: 8px 0 0;
-  } 
-}
-
-.heroContent {
-  flex-grow: 1;
-  max-width: 90%;
-  margin: 0 auto;
-  padding-bottom: 96px;
-  display: flex;
-  align-items: center;
-
-  @media (max-width: 850px) {
-    padding-bottom: 72px;
-  }
-
-  @media (max-width: 650px) {
-    padding-bottom: 56px;
-  } 
-}
-
-.imgWrap {
-  width: 60vh;
-  height: 60vh;
-  border: 1px solid rgba(51, 51, 51, .5);
-  border-radius: 50%;
-  display: flex;  
-  justify-content: center;
-  align-items: center;
-
-  @media (max-width: 2100px) {
-    width: 56vh;
-    height: 56vh;
-  }
-
-  @media (max-width: 1440px) {
-    width: 32vw;
-    height: 32vw;
-  }
-
-  @media (max-width: 850px) {
-    width: 62vw;
-    height: 62vw;
-  }
-
-  @media (max-width: 650px) {
-    width: 77vw;
-    height: 77vw;
-  }
-
-  @media (max-width: 510px) {
-    width: 89vw;
-    height: 89vw;
-  } 
-}
-
-.mainImg {
-  width: 36vh;
-  height: 36vh;
-  border-radius: 50%;
-  background-image: url(../images/us-main.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  mix-blend-mode: darken;
-  position: relative;
-
-  @media (max-width: 2100px) {
-    width: 34vh;
-    height: 34vh;
-  }
-
-  @media (max-width: 1440px) {
-    width: 24vw;
-    height: 24vw;
-  }
-
-  @media (max-width: 850px) {
-    width: 45vw;
-    height: 45vw;
-  }
-
-  @media (max-width: 650px) {
-    width: 56vw;
-    height: 56vw;
-  }
-
-  @media (max-width: 510px) {
-    width: 70vw;
-    height: 70vw;
-  }
-}
-
-.wreath {
-  transform: scale(2) rotate(90deg);
-  position: absolute;
-  bottom: -5px;
-  right: 0px;
-
-  @media (max-width: 2100px) {
-    transform: scale(1.9) rotate(90deg);
-  }
-
-  @media (max-width: 1440px) {
-    transform: scale(1.6) rotate(90deg);
-  }
-
-  @media (max-width: 510px) {
-    transform: scale(1.48) rotate(90deg);
-  }
-}
-
 .rsvpBox {
   background-color: var(--white);
   position: fixed;
@@ -325,6 +56,7 @@ h1 {
 
 .rsvpBtn {
   background-color: var(--black);
+  // border: 2px solid var(--black);
   color: var(--white);
   width: 244px;
   display: flex;
@@ -332,6 +64,17 @@ h1 {
   justify-content: center;
   padding: 0 18px;
   position: relative;
+  margin-right: 8px;
+  transition: background-color .1s;
+
+  &:hover, &:focus {
+    background-color: var(--dkgreen);
+    // border: 2px solid var(--dkgreen);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--dkgreen);
+  }
 
   @media (max-width: 1650px) {
     width: 196px;
@@ -361,6 +104,25 @@ h1 {
     }
   }
 
+  .top {
+    height: 32px;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    @media (max-width: 1650px) {
+      height: 25px;
+      top: 10px;
+      right: 12px;
+    }
+
+    @media (max-width: 1200px) {
+      position: static;
+      margin-left: 4px;
+      margin-top: -4px;
+    }
+  }
+
   .btnText {
     font-family: var(--italicFont);
     font-size: 2.4rem;
@@ -371,10 +133,20 @@ h1 {
       font-size: 1.8rem;
     }
 
+    @media (max-width: 1200px) {
+      &--hideMobile {
+        display: none;
+      }
+    }
+
     @media (max-width: 850px) {
       font-size: 1.6rem;
     }
   }
+}
+
+.btnTop {
+  display: none;
 }
 
 // = = = = = = = = = = = = = 
@@ -528,107 +300,6 @@ h1 {
     @media (max-width: 395px) {
       font-size: 4rem;
       margin-left: 14px;
-    } 
-  }
-}
-
-// = = = = = = = = = = = = = 
-// POLAROIDS SECTION
-// = = = = = = = = = = = = = 
-.polaroid {
-  width: 18%;
-  background-color: var(--white);
-  box-shadow: 0 2px 10px rgb(0 0 0 / 30%);
-  padding: 24px;
-  margin: 24px 0;
-
-  @media (max-width: 2100px) {
-    padding: 16px;
-    margin: 16px 0;
-  }
-
-  @media (max-width: 1650px) {
-    padding: 12px;
-    margin: 12px 0;
-  }
-
-  @media (max-width: 1200px) {
-    width: 23%;
-    min-width: 216px;
-    margin: 12px 4px;
-  }
-
-  @media (max-width: 650px) {
-    width: 47%;
-    padding-bottom: 16px;
-  }
-
-  // @media (max-width: 510px) {
-  //   width: 100%;
-  //   max-width: 300px;
-  // }
-
-  @media (max-width: 395px) {
-    margin: 4px 2px 12px;
-    padding-bottom: 14px;
-  } 
-
-  &__img {
-    margin-bottom: 18px;
-
-    @media (max-width: 2100px) {
-      margin-bottom: 16px;
-    }
-
-    @media (max-width: 1650px) {
-      margin-bottom: 12px;
-    }
-
-    @media (max-width: 650px) {
-      margin-bottom: 16px;
-    }
-
-    @media (max-width: 395px) {
-      margin-bottom: 10px;
-    } 
-
-    img {
-      width: 100%;
-    }
-  }
-
-  &__text {
-    color: var(--black);
-    font-size: 2.6rem;
-    text-transform: lowercase;
-    letter-spacing: .2px;
-    line-height: 1.25;
-
-    @media (max-width: 2100px) {
-      font-size: 2.3rem;
-    }
-
-    @media (max-width: 1650px) {
-      font-size: 1.8rem;
-      line-height: 1.2;
-    }
-    
-    @media (max-width: 1440px) {
-      font-size: 1.6rem;
-      line-height: 1.1;
-      letter-spacing: .1px;
-    }
-
-    @media (max-width: 1200px) {
-      min-height: 6rem;
-    }
-
-    @media (max-width: 510px) {
-      min-height: 4.8rem;
-    }
-
-    @media (max-width: 395px) {
-      font-size: 1.5rem;
     } 
   }
 }
@@ -827,13 +498,11 @@ h1 {
       @media (max-width: 650px) {
         font-size: 1.9rem;
         letter-spacing: 1.4px;
-        margin-bottom: 3px;
       }
 
       @media (max-width: 510px) {
         font-size: 1.8rem;
         letter-spacing: 1.6px;
-        margin-bottom: 4px;
       }
 
       @media (max-width: 395px) {
@@ -896,11 +565,11 @@ h1 {
     }
 
     @media (max-width: 510px) {
-      width: calc(100% - 99px);
+      width: calc(100% - 90px);
     }
 
     @media (max-width: 395px) {
-      width: calc(100% - 84px);
+      width: calc(100% - 80px);
     } 
   }
 
@@ -1015,7 +684,7 @@ h1 {
       background-position: center;
       border-radius: 50%;
       transform: rotate(0);
-      transition: transform .12s;
+      transition: transform .12s, background-color .2s;
 
       @media (max-width: 1650px) {
         top: calc(50% - 20px);
@@ -1185,6 +854,12 @@ h1 {
     a {
       text-decoration: underline;
       letter-spacing: .5px;
+      color: var(--black);
+      transition: color .1s;
+
+      &:hover, &:focus {
+        color: var(--dkgreen);
+      }
     }
   }
 
@@ -1265,505 +940,4 @@ h1 {
     text-decoration: underline;
     letter-spacing: .5px;
   }
-}
-
-// = = = = = = = = = = = = = 
-// RSVP FORM
-// = = = = = = = = = = = = = 
-.rsvpForm {
-  font-weight: 600;
-  letter-spacing: .25px;
-  margin-top: 20px;
-
-  @media (max-width: 650px) {
-    margin-top: 12px;
-  } 
-
-  @media (max-width: 395px) {
-    &__hideMobile {
-      display: none;
-    }
-  }
-
-  &__container {
-    all: unset;
-    display: block;
-    text-align: left;
-    border-bottom: 2px solid var(--dkgreen);
-    padding: 0 24px 30px;
-    margin-bottom: 24px;
-
-    @media (max-width: 1650px) {
-      padding: 0 18px 24px;
-    }
-
-    @media (max-width: 850px) {
-      padding: 6px 0 24px;
-    }
-
-    @media (max-width: 650px) {
-      padding: 0px 0 20px;
-      margin-bottom: 18px;
-    }
-
-    @media (max-width: 510px) {
-      border-bottom: 3px solid var(--dkgreen);
-    }
-  }
-
-  &__heading {
-    margin-bottom: 24px;
-  }
-
-  &__split {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-
-    @media (max-width: 1650px) {
-      margin-bottom: 12px;
-    }
-
-    @media (max-width: 510px) {
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 395px) {
-      &--number {
-        flex-direction: column;
-
-        label {
-          margin-bottom: 8px;
-        }
-      }
-    }
-
-    .rsvpForm__field {
-      width: 49%;
-
-      @media (max-width: 510px) {
-        width: 100%;
-
-        &:first-of-type {
-          margin-bottom: 12px;
-        }
-      } 
-    }
-
-    &--kids {
-      display: flex;
-      justify-content: flex-end;
-      margin-top: -12px;
-      padding-bottom: 24px;
-
-      @media (max-width: 1650px) {
-        margin-top: -4px;
-        padding-bottom: 12px;
-      }
-
-      @media (max-width: 510px) {
-        margin-top: 12px;
-        padding-bottom: 8px;
-      }
-    }
-
-    &--kidsLast {
-      display: flex;
-      justify-content: flex-end;
-      padding-bottom: 24px;
-      margin-bottom: 28px;
-      margin-top: -12px;
-      border-bottom: 1px solid var(--dkgreen);
-
-      @media (max-width: 1650px) {
-        padding-bottom: 14px;
-        margin-top: -4px;
-        margin-bottom: 16px;
-      }
-
-      @media (max-width: 510px) {
-        margin-top: 12px;
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: 8px;
-      }
-    }
-  }
-
-  &__numBtns {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .numInput {
-      height: 60px;
-      width: 96px;
-      margin: 0 12px;
-      text-align: center;
-      font-size: 2.8rem;
-      color: var(--black);
-
-      @media (max-width: 2100px) {
-        font-size: 2.5rem;
-      }
-
-      @media (max-width: 1650px) {
-        height: 48px;
-        width: 72px;
-        font-size: 2rem;
-      }
-
-      @media (max-width: 510px) {
-        font-size: 1.8rem;
-      }
-
-      @media (max-width: 395px) {
-        width: 96px;
-      }
-    }
-
-    .numBtn {
-      width: 40px;
-      height: 40px;
-      border: 2px solid var(--dkgreen);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      @media (max-width: 1650px) {
-        width: 28px;
-        height: 28px;
-      }
-
-      &__icon {
-        width: 18px;
-
-        @media (max-width: 1650px) {
-          width: 14px;
-        }
-      }
-    }
-  }
-
-  &__fieldset {
-    all: unset;
-    display: block;
-
-    &--show {
-      all: unset;
-      display: block;
-
-      @media (max-width: 510px) {
-        color: var(--black);
-        border: 2px solid var(--dkgreen);
-        border-radius: 3px;
-        padding: 4px 12px;
-        margin: -6px 0 12px;
-
-        input[type="text"], input[type="checkbox"] {
-          border: 1px solid var(--dkgreen) !important;
-        }
-      }
-    }
-  }
-
-  &__legend {
-    display: none;
-
-    &--show {
-      display: none;
-
-      @media (max-width: 510px) {
-        display: block;
-      }
-    }
-  }
-
-  input[type="text"], input[type="email"], textarea {
-    border: 1px solid var(--dkgreen);
-    border-radius: 3px;
-
-    @media (max-width: 510px) {
-      border: 2px solid var(--dkgreen);
-    }
-    
-    &:focus {
-      outline: none;
-    }
-  }
-
-  input[type="radio"], input[type="checkbox"] {
-    appearance: none;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border: 2px solid var(--dkgreen);
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-    @media (max-width: 1650px) {
-      width: 30px;
-      height: 30px;
-    }
-
-    &::before {
-      content: '';
-      width: 28px;
-      height: 28px;
-      border-radius: 2px;
-      background: rgba(124, 141, 98, .9);
-      transform: scale(0);
-      transition: transform .1s;
-
-      @media (max-width: 1650px) {
-        width: 20px;
-        height: 20px;
-      }
-    }
-
-    &:checked::before {
-      transform: scale(1);
-    }
-
-    &:focus {
-      outline: 1px solid var(--dkgreen);
-    }
-
-    &.rsvpForm__kids {
-      border: 1px solid var(--dkgreen);
-      margin-left: 8px;
-    }
-  }
-
-  &__field {
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    &--top {
-      position: relative;
-      display: flex;
-
-      .rsvpForm__label {
-        top: 8px;
-      }
-    }
-
-    &--topMargin {
-      margin-top: 24px;
-
-      @media (max-width: 1650px) {
-        margin-top: 12px;
-      }
-    }
-  }
-
-  &__label {
-    position: absolute;
-    left: 12px;
-    width: 100%;
-    color: #808080;
-    transition: all .2s;
-
-    @media (max-width: 395px) {
-      padding: 0 14px 0 0;
-    }
-  }
-
-  &__inputText {
-    width: 100%;
-    padding: 24px 4px 8px;
-    z-index: 10;
-    background-color: transparent;
-    transition: all .2s;
-    color: var(--black);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2.4rem;
-    letter-spacing: .75px;
-    line-height: 1.5;
-
-    @media (max-width: 2100px) {
-      font-size: 2rem;
-    }
-
-    @media (max-width: 1650px) {
-      padding: 18px 4px 4px;
-      font-size: 1.6rem;
-      letter-spacing: .5px;
-    }
-
-    @media (max-width: 510px) {
-      font-size: 1.5rem;
-    }
-
-    &:focus, &--active {
-      background: #fff;
-      border-radius: 2px;
-      margin: 24px 4px 4px;
-      padding: 2px 6px;
-      
-      @media (max-width: 1650px) {
-        margin: 18px 2px 2px;
-        padding: 2px 6px;
-      }
-    }
-
-    &:focus + .rsvpForm__label,
-    &--active + .rsvpForm__label {
-      top: 0;
-      left: 0;
-      height: 100%;
-      color: #fff;
-      background-color: rgba(124, 141, 98, .9);
-      border-radius: 3px;
-
-      span {
-        position: absolute;
-        left: 10px;
-        top: 2px;
-        font-size: 1.4rem;
-
-        @media (max-width: 1650px) {
-          left: 8px;
-          top: 1px;
-          font-size: 1.2rem;
-        }
-
-        @media (max-width: 510px) {
-          font-size: 1.1rem;
-        }
-      }
-    }
-  }
-
-  &__kids {
-    width: 49%;
-    display: flex;
-    justify-content: space-between;
-
-    @media (max-width: 510px) {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .kidsAge {
-      display: none;
-
-      @media (max-width: 510px) {
-        margin-left: 18px;
-      }
-    }
-
-    &--check {
-      margin-right: 8px;
-
-      @media (max-width: 510px) {
-        margin-right: 4px;
-      }
-    }
-
-    &--age {
-      height: 40px;
-      width: 60px;
-      border: 2px solid var(--dkgreen);
-      margin-left: 8px;
-      color: var(--black);
-      font-family: 'Open Sans', sans-serif;
-      font-size: 2.4rem;
-      letter-spacing: .5px;
-      text-align: center;
-
-      @media (max-width: 2100px) {
-        font-size: 2rem;
-      }
-
-      @media (max-width: 1650px) {
-        height: 30px;
-        width: 48px;
-        font-size: 1.6rem;
-      }
-
-      @media (max-width: 510px) {
-        margin-left: 4px;
-      }
-    }
-  }
-
-  &__textarea {
-    resize: none;
-    height: 120px;
-
-    @media (max-width: 1650px) {
-      height: 96px;
-    }
-  }
-
-  &__submit {
-    background-color: var(--dkgreen);
-    color: #fff;
-    font-size: 2.4rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 14px 20px;
-    display: flex;
-    margin: 28px auto 30px;
-    border-radius: 3px;
-    transition: background-color .2s ease-in;
-
-    @media (max-width: 2100px) {
-      font-size: 2rem;
-    }
-
-    @media (max-width: 1650px) {
-      font-size: 1.6rem;
-      padding: 12px 16px;
-      margin: 24px auto 0;
-    }
-
-    @media (max-width: 650px) {
-      margin: 18px auto 0;
-    }
-
-    @media (max-width: 510px) {
-      padding: 11px 16px 12px;
-      font-size: 1.5rem;
-    } 
-
-    &:disabled {
-      background-color: #808080;
-      cursor: default;
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--black);
-    }
-
-    img {
-      height: 28px;
-      margin-right: 8px;
-
-      @media (max-width: 2100px) {
-        height: 24px;
-      }
-
-      @media (max-width: 1650px) {
-        height: 20px;
-      }
-
-      @media (max-width: 510px) {
-        height: 18px;
-      } 
-    }
-  }
-}
-
-#rsvpDeclined, #rsvpAccepted {
-  display: none;
 }
