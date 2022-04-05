@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import Rsvp from "./Rsvp";
 import linkIcon from "../images/icons/link.png";
 import busIcon from "../images/icons/bus.png";
+import contact from "../images/icons/contact.png";
 
 const Details = () => {
 
@@ -136,6 +137,15 @@ const Details = () => {
                   <p className="dropdown__paragraph"><strong>Museum</strong> is the closest TTC subway station (50 metres from the venue!)</p>
 
                   <p>Unfortunately, there is no parking on site. The closest municipal (Green P) parking is on Bedford Road or Yorkville Avenue.</p>
+                </div>
+
+                <div className="dropdown__box">
+                  <h4 className="dropdown__heading dropdown__topMargin dropdown__heading--center">
+                    <img src={contact} className="dropdown__icon--larger" alt="" aria-hidden="true" />
+                    <span>Contact Info</span>
+                  </h4>
+
+                  <p>cindyandjarek@gmail.com</p>
                 </div>
               </div>
             </div>

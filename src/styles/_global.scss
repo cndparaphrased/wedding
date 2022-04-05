@@ -839,6 +839,19 @@ body {
       height: 14px;
       margin-right: 5px;
     } 
+
+    &--larger {
+      height: 28px;
+      margin-right: 4px;
+
+      @media (max-width: 1650px) {
+        height: 23px;
+      }
+
+      @media (max-width: 650px) {
+        height: 19px;
+      }
+    }
   }
 
   &__site {
