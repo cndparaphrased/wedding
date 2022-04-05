@@ -124,7 +124,7 @@ const Details = () => {
                 </div>
 
                 <div className="dropdown__box">
-                  <p className="dropdown__topMargin">Please head upstairs to the Terrace Room on the second floor.</p>
+                  <p className="dropdown__topMargin">Please head upstairs to the Terrace Room on the third floor.</p>
                 </div>
 
                 <div className="dropdown__box">

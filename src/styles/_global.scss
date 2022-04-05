@@ -13,11 +13,10 @@ body {
   font-family: var(--serifFont);
   font-size: 1.6rem;
   background-color: var(--white);
-  background-image: url(../images/bg/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-image: url(../images/bg/bgEdges.png);
+  background-size: 100% auto;
   background-attachment: fixed;
+  background-position: top center;
 
   @media (max-width: 850px) {
     background-image: none;
