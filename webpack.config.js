@@ -41,6 +41,10 @@ module.exports = {
         type: 'asset',
       },
       {
+        test: /\.mp4$/,
+        type: "asset",
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
