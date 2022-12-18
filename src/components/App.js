@@ -3,6 +3,7 @@ import Main from "./Main";
 import Media from "./Media";
 import Extras from "./Extras";
 import Stories from "./Stories";
+import Footer from "./Footer";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Media />
       <Extras />
       <Stories />
+      <Footer />
     </>
   )
 }

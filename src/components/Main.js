@@ -1,11 +1,7 @@
-import heroMobile from "../images/bg/subwayMobile.jpeg";
-
 const Main = () => {
   return (
     <section className="mainContainer">
-      <div className="heroImg">
-        <img src={heroMobile} alt="" className="heroImg--mobile" />
-      </div>
+      <div className="heroImg"></div>
       <div className="heroTextContainer">
         <div className="heroText">
           <h1>

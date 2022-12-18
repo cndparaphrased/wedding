@@ -13,28 +13,12 @@ body {
   background-color: var(--white);
 }
 
-section:last-of-type {
-  margin-bottom: 96px;
-
-  @media (max-width: 680px) {
-    margin-bottom: 48px;
-  }
-
-  @media (max-width: 550px) {
-    margin-bottom: 24px;
-  }
-}
-
 .mainContainer {
   height: 100vh;
   display: flex;
 
     @media (max-width: 960px) {
       position: relative;
-    }
-
-    @media (max-width: 550px) {
-      height: auto;
     }
 }
 
@@ -63,14 +47,6 @@ section:last-of-type {
 
   @media (max-width: 680px) {
     padding: 24px;
-  }
-
-  @media (max-width: 550px) {
-    padding: 16px;
-
-    h2 {
-      text-align: center;
-    }
   }
 }
 
@@ -252,11 +228,7 @@ a.link--inline {
   }
 
   @media (max-width: 680px) {
-    padding: 24px;
-  }
-
-  @media (max-width: 550px) {
-    padding: 16px;
+    padding: 0 24px 24px;
   }
 
   &--left, &--right, .contentBox {
@@ -304,10 +276,6 @@ a.link--inline {
 
     @media (max-width: 550px) {
       margin-bottom: 4px;
-
-      h2 {
-        text-align: center;
-      }
     }
   }
 
@@ -592,6 +560,46 @@ a.link--inline {
       @media (max-width: 550px) {
         width: 24px;
       }
+    }
+  }
+}
+
+// = = = = = = = = = = = = = 
+// FOOTER
+// = = = = = = = = = = = = = 
+.copyright {
+  color: var(--dkgreen);
+  text-align: center;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1.2rem;
+  }
+
+  &__link {
+    margin: 5px 4px 0;
+
+    @media (max-width: 960px) {
+      margin: 3px 4px 0;
+    }
+
+    @media (max-width: 550px) {
+      margin: 3px 3px 0;
+    }
+  }
+
+  &__year {
+    margin-top: 5px;
+
+    @media (max-width: 960px) {
+      margin-top: 3px;
     }
   }
 }
